@@ -1,0 +1,272 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rise.local/schemas/qwen-abbreviation-result.schema.json",
+  "title": "Normalized Qwen3 abbreviation study result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "experiment_id",
+    "model_key",
+    "strategy_id",
+    "prompt_id",
+    "set_id",
+    "request_order",
+    "dataset_prompt",
+    "prompt",
+    "prompt_sha256",
+    "dataset_metadata",
+    "gateway",
+    "requested_model_id",
+    "actual_model_id",
+    "requested_provider_id",
+    "actual_provider_id",
+    "generation_id",
+    "request_id",
+    "success",
+    "status",
+    "attempts",
+    "retries",
+    "failed_attempts",
+    "error",
+    "completion",
+    "reasoning",
+    "prompt_tokens",
+    "completion_tokens",
+    "reasoning_tokens",
+    "total_tokens",
+    "finish_reason",
+    "native_finish_reason",
+    "truncated",
+    "total_latency_ms",
+    "time_to_first_token_ms",
+    "operation_elapsed_ms",
+    "started_at_utc",
+    "completed_at_utc"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "experiment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "strategy_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prompt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "set_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_order": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "dataset_prompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prompt_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "dataset_metadata": {
+      "type": "object"
+    },
+    "gateway": {
+      "enum": [
+        "huggingface",
+        "openrouter"
+      ]
+    },
+    "requested_model_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actual_model_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "requested_provider_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "actual_provider_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "generation_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "success": {
+      "type": "boolean"
+    },
+    "status": {
+      "enum": [
+        "success",
+        "failure"
+      ]
+    },
+    "attempts": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "retries": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "failed_attempts": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "error": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/error"
+        }
+      ]
+    },
+    "completion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reasoning": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "prompt_tokens": {
+      "$ref": "#/$defs/nullableNonnegativeInteger"
+    },
+    "completion_tokens": {
+      "$ref": "#/$defs/nullableNonnegativeInteger"
+    },
+    "reasoning_tokens": {
+      "$ref": "#/$defs/nullableNonnegativeInteger"
+    },
+    "total_tokens": {
+      "$ref": "#/$defs/nullableNonnegativeInteger"
+    },
+    "finish_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "native_finish_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "truncated": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "total_latency_ms": {
+      "$ref": "#/$defs/nullableNonnegativeNumber"
+    },
+    "time_to_first_token_ms": {
+      "$ref": "#/$defs/nullableNonnegativeNumber"
+    },
+    "operation_elapsed_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "started_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "$defs": {
+    "nullableNonnegativeInteger": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "nullableNonnegativeNumber": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "message",
+        "http_status",
+        "retryable"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "http_status": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "retryable": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

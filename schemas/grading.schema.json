@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rise.local/schemas/v3-original-rubric-scores.schema.json",
+  "title": "V3 original project rubric scores",
+  "type": "object",
+  "description": "Accuracy is scored for every response. Clarification is scored only for real_low_context. Hallucination is scored only for synthetic_high_context. Other allowed fields are record-linkage or audit metadata, not grading metrics.",
+  "required": [
+    "run_id",
+    "condition",
+    "accuracy",
+    "clarification",
+    "hallucination"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "condition": {
+      "enum": [
+        "real_low_context",
+        "real_high_context",
+        "synthetic_high_context"
+      ]
+    },
+    "accuracy": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "clarification": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 2
+    },
+    "hallucination": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 2
+    }
+  },
+  "additionalProperties": true,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "condition": {
+            "const": "real_low_context"
+          }
+        },
+        "required": [
+          "condition"
+        ]
+      },
+      "then": {
+        "properties": {
+          "clarification": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "hallucination": {
+            "const": null
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "condition": {
+            "const": "real_high_context"
+          }
+        },
+        "required": [
+          "condition"
+        ]
+      },
+      "then": {
+        "properties": {
+          "clarification": {
+            "const": null
+          },
+          "hallucination": {
+            "const": null
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "condition": {
+            "const": "synthetic_high_context"
+          }
+        },
+        "required": [
+          "condition"
+        ]
+      },
+      "then": {
+        "properties": {
+          "clarification": {
+            "const": null
+          },
+          "hallucination": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+          }
+        }
+      }
+    }
+  ]
+}

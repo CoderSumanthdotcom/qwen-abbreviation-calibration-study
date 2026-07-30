@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "experiment_id": "qwen-abbrev-v3-32b-nonthinking-siliconflow-20260725-v8",
+  "created_at_utc": "2026-07-25T17:03:50.980356Z",
+  "completed_at_utc": "2026-07-25T22:50:12.735981Z",
+  "extracted_at_utc": null,
+  "extraction_rule": null,
+  "public_config_path": "configs/qwen3_32b.json",
+  "public_config_sha256": "dabc6198e2608dffa7ef21ad9be3d9b8677c5734650c8edaf46da1e62bd3d8f0",
+  "source_collection_config_sha256": "448ba451dbcc87575e6614a4628aa294051bf358cefc72828fa6a7cfcf7f19fe",
+  "dataset_path": "data/prompts/v3_900_prompts.jsonl",
+  "dataset_sha256": "4d830c3e09b9b28c075254b6476a88471c9dfe8390e7bbddea7c1ed06f17b9a2",
+  "execution_mode": "execute",
+  "randomization_seed": "qwen-abbrev-v3-32b-nonthinking-siliconflow-20260725-v8-seed-01",
+  "selected_model_keys": [
+    "qwen3_32b"
+  ],
+  "selected_strategy_ids": [
+    "baseline"
+  ],
+  "success_count": 900,
+  "failure_count": 0,
+  "public_release_note": "Local paths and provider request/generation identifiers were removed."
+}

@@ -1,0 +1,5 @@
+metric,condition,numerator,denominator,rate,grading_status
+Ideal response,Real abbreviation / low context,473,1200,0.3941666667,Original project rubric
+Ideal response,Real abbreviation / high context,1118,1200,0.9316666667,Original project rubric
+Ideal response,Synthetic string / high context,6,1200,0.005,Original project rubric
+Definitive unsupported assignment,Synthetic string / high context,620,1200,0.5166666667,Original project rubric

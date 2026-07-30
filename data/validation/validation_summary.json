@@ -1,0 +1,37 @@
+{
+  "validation_date": "2026-07-24",
+  "workbook": "outputs/v3_remediation_steps_9_10_20260724/question_set_abbreviations_v3_steps_9_10.xlsx",
+  "workbook_sha256": "0c6059ca37fd940d1d7533cf43bb7ed8bc90092ec4a53296175bc7fe0b402a79",
+  "prompt_row_count": 900,
+  "set_count": 300,
+  "condition_counts": {
+    "real_low_context": 300,
+    "real_high_context": 300,
+    "synthetic_high_context": 300
+  },
+  "article_agreement_defects": 0,
+  "matched_high_context_pairs": 300,
+  "unique_synthetic_strings": 300,
+  "synthetic_real_collisions": 0,
+  "length_fallback_count": 8,
+  "required_execution_field_failures": 0,
+  "checks": {
+    "row_and_set_counts": true,
+    "exact_conditions_per_set": true,
+    "id_integrity": true,
+    "standardized_requests": true,
+    "zero_action_only_prompts": true,
+    "zero_missing_alternate_meanings": true,
+    "zero_article_agreement_defects": true,
+    "exact_high_context_matching": true,
+    "expected_behavior_consistency": true,
+    "unique_synthetic_strings": true,
+    "no_synthetic_real_collisions": true,
+    "exactly_eight_documented_length_fallbacks": true,
+    "required_execution_fields": true,
+    "set_index_reconciliation": true,
+    "no_formula_errors": true
+  },
+  "failure_count": 0,
+  "failures": []
+}

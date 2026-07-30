@@ -1,0 +1,9 @@
+contrast,model,model_label,left_condition,right_condition,n_sets,left_ideal_rate,right_ideal_rate,difference_right_minus_left,bootstrap_ci_low,bootstrap_ci_high,both_ideal,left_only_ideal,right_only_ideal,neither_ideal,mcnemar_exact_p
+context_effect_for_real_abbreviations,qwen3_4b,Qwen3 4B,real_low_context,real_high_context,300,0.33666666666666667,0.9166666666666666,0.58,0.51,0.6466666666666666,83,18,192,7,6.23725894927579e-38
+real_vs_synthetic_under_high_context,qwen3_4b,Qwen3 4B,real_high_context,synthetic_high_context,300,0.9166666666666666,0.0033333333333333335,-0.9133333333333333,-0.9433333333333334,-0.88,1,274,0,25,6.588873714519077e-83
+context_effect_for_real_abbreviations,qwen3_8b,Qwen3 8B,real_low_context,real_high_context,300,0.4166666666666667,0.9366666666666666,0.52,0.4533333333333333,0.5866666666666667,111,14,170,5,3.127131016108e-35
+real_vs_synthetic_under_high_context,qwen3_8b,Qwen3 8B,real_high_context,synthetic_high_context,300,0.9366666666666666,0.01,-0.9266666666666666,-0.9533333333333334,-0.8966666666666666,3,278,0,19,4.118046071574423e-84
+context_effect_for_real_abbreviations,qwen3_14b,Qwen3 14B,real_low_context,real_high_context,300,0.46,0.9366666666666666,0.4766666666666666,0.41,0.5433333333333333,124,14,157,5,8.891425385680065e-32
+real_vs_synthetic_under_high_context,qwen3_14b,Qwen3 14B,real_high_context,synthetic_high_context,300,0.9366666666666666,0.0033333333333333335,-0.9333333333333333,-0.96,-0.9033333333333333,1,280,0,19,1.0295115178936058e-84
+context_effect_for_real_abbreviations,qwen3_32b,Qwen3 32B,real_low_context,real_high_context,300,0.36333333333333334,0.9366666666666666,0.5733333333333333,0.5066666666666667,0.6366666666666667,96,13,185,6,4.1297423543581746e-40
+real_vs_synthetic_under_high_context,qwen3_32b,Qwen3 32B,real_high_context,synthetic_high_context,300,0.9366666666666666,0.0033333333333333335,-0.9333333333333333,-0.96,-0.9033333333333333,1,280,0,19,1.0295115178936058e-84

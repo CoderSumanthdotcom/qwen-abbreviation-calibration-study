@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "experiment_id": "qwen-abbrev-v3-8b-14b-32b-nonthinking-20260725-v7",
+  "created_at_utc": "2026-07-25T06:49:28.675713Z",
+  "completed_at_utc": null,
+  "extracted_at_utc": "2026-07-25T15:26:29.288841+00:00",
+  "extraction_rule": "Retained only qwen3_8b after validating 900 successful Alibaba non-thinking responses with no empty, reasoning, or truncated rows.",
+  "public_config_path": "configs/qwen3_8b.json",
+  "public_config_sha256": "e658c60820cc12894a6c51a2f6da1a45c4e01375c9d8a18245cd2fe5412d7b7f",
+  "source_collection_config_sha256": "bced95960ca0f8ad7fa6bd56da61eb6e363bb92073e8a789ce756637c54dd788",
+  "dataset_path": "data/prompts/v3_900_prompts.jsonl",
+  "dataset_sha256": "4d830c3e09b9b28c075254b6476a88471c9dfe8390e7bbddea7c1ed06f17b9a2",
+  "execution_mode": "execute",
+  "randomization_seed": "qwen-abbrev-v3-all-nonthinking-20260725-v7-seed-01",
+  "selected_model_keys": [
+    "qwen3_8b"
+  ],
+  "selected_strategy_ids": [
+    "baseline"
+  ],
+  "success_count": 900,
+  "failure_count": 0,
+  "public_release_note": "Local paths and provider request/generation identifiers were removed."
+}

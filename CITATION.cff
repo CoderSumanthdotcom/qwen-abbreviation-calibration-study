@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, data, or analysis, please cite this repository."
+title: "Can Large Language Models Tell Knowledge from Context? Established Abbreviation Knowledge Versus Contextual Inference in Qwen3"
+type: dataset
+authors:
+  - family-names: "Kaja"
+    given-names: "Sumanth"
+version: 1.0.0
+date-released: 2026-07-30
+repository-code: "https://github.com/CoderSumanthdotcom/qwen-abbreviation-calibration-study"
+url: "https://github.com/CoderSumanthdotcom/qwen-abbreviation-calibration-study"
+keywords:
+  - large language models
+  - abbreviations
+  - hallucination
+  - epistemic calibration
+  - Qwen3
+license: CC-BY-4.0

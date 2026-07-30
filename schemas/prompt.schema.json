@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rise.local/schemas/qwen-abbreviation-prompt.schema.json",
+  "title": "Prepared abbreviation prompt row",
+  "type": "object",
+  "required": [
+    "prompt_id",
+    "set_id",
+    "prompt"
+  ],
+  "properties": {
+    "prompt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "set_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "condition": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "domain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "abbreviation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "target_expansion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

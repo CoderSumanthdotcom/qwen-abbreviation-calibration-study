@@ -1,0 +1,25 @@
+{
+  "qa_timestamp_utc": "2026-07-25T01:50:03.815Z",
+  "source_title": "question_set_abbreviations_v3",
+  "public_output_dataset": "data/prompts/v3_900_prompts.jsonl",
+  "output_sha256": "4d830c3e09b9b28c075254b6476a88471c9dfe8390e7bbddea7c1ed06f17b9a2",
+  "prompt_row_count": 900,
+  "set_count": 300,
+  "unique_prompt_id_count": 900,
+  "condition_counts": {
+    "real_low_context": 300,
+    "real_high_context": 300,
+    "synthetic_high_context": 300
+  },
+  "unique_synthetic_abbreviation_count": 300,
+  "synthetic_to_real_collision_count": 0,
+  "pending_review_count": 0,
+  "article_mismatch_count": 0,
+  "standardized_epistemic_label_sentence_present_count": 0,
+  "expected_interpretation_counts": {
+    "real_high_context_present": 300,
+    "non_real_high_context_present": 0
+  },
+  "all_original_dataset_checks_pass": true,
+  "public_release_note": "Private source spreadsheet identifiers were removed."
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "experiment_id": "qwen-abbrev-v3-32b-nonthinking-siliconflow-20260725-v8",
+  "dataset": {
+    "path": "../data/prompts/v3_900_prompts.jsonl",
+    "format": "jsonl",
+    "expected_prompt_rows": 900,
+    "expected_set_count": 300
+  },
+  "output_dir": "../run_outputs/qwen3_32b",
+  "randomization_seed": "qwen-abbrev-v3-32b-nonthinking-siliconflow-20260725-v8-seed-01",
+  "generation": {
+    "temperature": 0,
+    "top_p": 1,
+    "max_output_tokens": null,
+    "thinking_enabled": false,
+    "reasoning_max_tokens": null,
+    "request_timeout_seconds": 300
+  },
+  "retry": {
+    "max_attempts": 3,
+    "initial_backoff_seconds": 2,
+    "maximum_backoff_seconds": 60
+  },
+  "strategies": [
+    {
+      "id": "baseline",
+      "prompt_prefix": "",
+      "prompt_suffix": ""
+    }
+  ],
+  "models": [
+    {
+      "key": "qwen3_32b",
+      "gateway": "openrouter",
+      "model_id": "qwen/qwen3-32b",
+      "credential_env": "OPENROUTER_API_KEY",
+      "requested_provider": "siliconflow",
+      "prompt_prefix": "",
+      "prompt_suffix": ""
+    }
+  ]
+}
